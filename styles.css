@@ -1,0 +1,113 @@
+html {
+	background-color: #e4e4e4;
+	overflow-y: scroll;
+}
+
+body
+{
+
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+	font-size: 14px;
+	overflow: visible;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+
+.group:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* Trigger has-layout for IE compatibility */
+.group {
+	zoom: 1;
+}
+
+/* Title bar  -------*/
+#title-bar {
+	background-color: #333;
+}
+
+#add-film {
+	background-color: #444;
+	border:1px solid #555;
+	-webkit-appearance: none;
+}
+
+#film-details {
+	width: 95%;
+	margin: auto;
+}
+
+#container {
+	width: 95%; /* 304px */
+	margin: auto;
+}
+
+.title {
+	font-size: 300%;
+	text-shadow: 0 -1px 1px rgba(255,255,255,0.6);
+	letter-spacing:  -0.06em;
+}
+
+.flip-container {
+	position: relative;
+	width: 100%;
+	height: 456px;
+	z-index: 1;
+	-webkit-perspective: 1000px;
+	margin: 10px auto;
+}
+
+/*.flip-container:hover .flip-card {
+	-webkit-transform:rotateY(180deg);
+
+}*/
+
+.flip-container .flip {
+	-webkit-transform:rotateY(180deg);
+}
+
+.flip-card {
+	width:100%;
+	height:100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform .4s;
+
+}
+
+.face {
+	position: absolute;
+	width:100%;
+	height:100%;
+	-webkit-backface-visibility: hidden;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+	overflow:hidden;
+	-webkit-box-sizing: border-box;
+}
+
+.front {
+background-color: hsl(2, 57%, 40%);
+background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
+}
+
+.back {
+	display:block;
+	-webkit-transform:rotateY(180deg);
+	background-color: rgba(255,255,255,0.5);
+	padding: 10px;
+}
+
+button {
+	-webkit-appearance: none;
+  	border: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 44px;
+}
