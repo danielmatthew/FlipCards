@@ -27,21 +27,7 @@ body
 	zoom: 1;
 }
 
-/* Title bar  -------*/
-#title-bar {
-	background-color: #333;
-}
 
-#add-film {
-	background-color: #444;
-	border:1px solid #555;
-	-webkit-appearance: none;
-}
-
-#film-details {
-	width: 95%;
-	margin: auto;
-}
 
 #container {
 	width: 95%; /* 304px */
